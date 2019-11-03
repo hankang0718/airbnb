@@ -1,3 +1,3 @@
 # Airbnb 시작
 
-- [ ] 3.3 Finishing User Model 2:13 부터
+- [ ] 3.6 Recap OMG 처음부터

@@ -22,6 +22,10 @@ class User(AbstractUser):
         (LANGUAGE_ENGLISH, "영어"),
         (LANGUAGE_KOREAN, "한국어"),
     )
+    CURRENCY_USD = "usd"
+    CURRENCY_KRW = "krw"
+
+    CURRENCY_CHOICES = ((CURRENCY_USD, "USD"), (CURRENCY_KRW, "KRW"))
 
     avatar = models.ImageField(null=True, blank=True)
     gender = models.CharField(
@@ -29,4 +33,10 @@ class User(AbstractUser):
     )
     bio = models.TextField(default="", blank=True)
     birthdate = models.DateField(null=True)
-    language = models.CharField(choices=LAUGAUAGE_CHOICES,)
+    language = models.CharField(
+        choices=LANGUAGE_CHOICES, max_length=6, null=True, blank=True
+    )
+    currency = models.CharField(
+        choices=CURRENCY_CHOICES, max_length=3, null=True, blank=True
+    )
+    superhost = models.BooleanField(default=False)
