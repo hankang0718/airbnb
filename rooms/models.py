@@ -67,7 +67,7 @@ class Room(core_models.TimeStampedModel):
 
     """ Room Model Definition """
 
-    name = models.CharField(max_length=140)
+    name = models.CharField(max_length=140, null=True)
     description = models.TextField()
     country = CountryField()
     city = models.CharField(max_length=80)
