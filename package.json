@@ -1,0 +1,22 @@
+{
+  "name": "airbnb_clone",
+  "version": "1.0.0",
+  "description": "django + node js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hankang0718/airbnb.git"
+  },
+  "scripts": {
+    "css": "gulp"
+  },
+  "homepage": "https://github.com/hankang0718/airbnb#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.0",
+    "tailwindcss": "^1.1.4"
+  }
+}
