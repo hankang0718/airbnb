@@ -33,11 +33,6 @@ class SignUpView(FormView):
     template_name = "users/signup.html"
     form_class = forms.SignUpForm
     success_url = reverse_lazy("core:home")
-    initial = {
-        "first_name": "kang",
-        "last_name": "han",
-        "email": "han_gang@naver.com",
-    }
 
     def form_valid(self, form):
         form.save()
@@ -101,7 +96,6 @@ def github_callback(request):
                     },
                 )
                 profile_json = profile_request.json()
-                print(profile_json)
                 username = profile_json.get("login", None)
                 if username is not None:
                     name = profile_json.get("name")
